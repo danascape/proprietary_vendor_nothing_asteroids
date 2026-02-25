@@ -9240,7 +9240,7 @@ cc_prebuilt_library_shared {
                 "libEGL",
                 "libGLESv2",
                 "libGLESv3",
-                "libtensorflowlite_c",
+                "libtensorflowlite_c_vendor",
                 "libm",
                 "libc",
             ],
@@ -11509,7 +11509,7 @@ cc_prebuilt_library_shared {
                 "libcutils",
                 "liblog",
                 "libVoiceSdk",
-                "libtensorflowlite_c",
+                "libtensorflowlite_c_vendor",
                 "libc++",
                 "libc",
                 "libm",
@@ -12319,7 +12319,7 @@ cc_prebuilt_library_shared {
                 "liblog",
                 "libbinder",
                 "libdrm",
-                "libtinyxml2",
+                "libtinyxml2-v34",
                 "libdisplaydebug",
                 "libhidlbase",
                 "android.frameworks.sensorservice@1.0",
@@ -14104,7 +14104,7 @@ cc_prebuilt_library_shared {
                 "libcutils",
                 "liblog",
                 "libVoiceSdk",
-                "libtensorflowlite_c",
+                "libtensorflowlite_c_vendor",
                 "libc++",
                 "libc",
                 "libm",
@@ -17030,7 +17030,7 @@ cc_prebuilt_library_shared {
                 "libutils",
                 "liblog",
                 "libbinder",
-                "libtinyxml2",
+                "libtinyxml2-v34",
                 "vendor.display.config@1.0",
                 "libhidlbase",
                 "libc++",
@@ -17132,57 +17132,6 @@ cc_prebuilt_library_shared {
                 "libsqlite",
                 "liblmutils-ns",
                 "libmemperfd",
-                "libc++",
-                "libc",
-                "libm",
-                "libdl",
-            ],
-        },
-    },
-    compile_multilib: "64",
-    prefer: true,
-    soc_specific: true,
-}
-
-cc_prebuilt_library_shared {
-    name: "libprotobuf-cpp-full-21.7",
-    owner: "nothing",
-    strip: {
-        none: true,
-    },
-    target: {
-        android_arm64: {
-            srcs: [
-                "proprietary/vendor/lib64/libprotobuf-cpp-full-21.7.so",
-            ],
-            shared_libs: [
-                "libz",
-                "liblog",
-                "libc++",
-                "libc",
-                "libm",
-                "libdl",
-            ],
-        },
-    },
-    compile_multilib: "64",
-    prefer: true,
-    soc_specific: true,
-}
-
-cc_prebuilt_library_shared {
-    name: "libprotobuf-cpp-lite-21.7",
-    owner: "nothing",
-    strip: {
-        none: true,
-    },
-    target: {
-        android_arm64: {
-            srcs: [
-                "proprietary/vendor/lib64/libprotobuf-cpp-lite-21.7.so",
-            ],
-            shared_libs: [
-                "liblog",
                 "libc++",
                 "libc",
                 "libm",
@@ -20451,7 +20400,7 @@ cc_prebuilt_library_shared {
                 "libdisplaydebug",
                 "libsdm-color",
                 "libbinder",
-                "libtinyxml2",
+                "libtinyxml2-v34",
                 "libsdmutils",
                 "libdrm",
                 "libdigital-dimming",
@@ -20943,7 +20892,7 @@ cc_prebuilt_library_shared {
 }
 
 cc_prebuilt_library_shared {
-    name: "libtensorflowlite_c",
+    name: "libtensorflowlite_c_vendor",
     owner: "nothing",
     strip: {
         none: true,
@@ -20951,7 +20900,7 @@ cc_prebuilt_library_shared {
     target: {
         android_arm64: {
             srcs: [
-                "proprietary/vendor/lib64/libtensorflowlite_c.so",
+                "proprietary/vendor/lib64/libtensorflowlite_c_vendor.so",
             ],
             shared_libs: [
                 "libm",
@@ -26352,7 +26301,7 @@ cc_prebuilt_library_shared {
 }
 
 prebuilt_rfsa {
-    name: "libQnnHtpV73",
+    name: "vendor_lib_rfsa_adsp_libQnnHtpV73_so",
     filename: "libQnnHtpV73.so",
     owner: "nothing",
     src: "proprietary/vendor/lib/rfsa/adsp/libQnnHtpV73.so",
@@ -26361,7 +26310,7 @@ prebuilt_rfsa {
 }
 
 prebuilt_rfsa {
-    name: "libQnnHtpV73Skel",
+    name: "vendor_lib_rfsa_adsp_libQnnHtpV73Skel_so",
     filename: "libQnnHtpV73Skel.so",
     owner: "nothing",
     src: "proprietary/vendor/lib/rfsa/adsp/libQnnHtpV73Skel.so",
@@ -26370,7 +26319,7 @@ prebuilt_rfsa {
 }
 
 prebuilt_rfsa {
-    name: "libadsp_jpege_skel",
+    name: "vendor_lib_rfsa_adsp_libadsp_jpege_skel_so",
     filename: "libadsp_jpege_skel.so",
     owner: "nothing",
     src: "proprietary/vendor/lib/rfsa/adsp/libadsp_jpege_skel.so",
@@ -26379,7 +26328,7 @@ prebuilt_rfsa {
 }
 
 prebuilt_rfsa {
-    name: "libarc_htp_driver_skel",
+    name: "vendor_lib_rfsa_adsp_libarc_htp_driver_skel_so",
     filename: "libarc_htp_driver_skel.so",
     owner: "nothing",
     src: "proprietary/vendor/lib/rfsa/adsp/libarc_htp_driver_skel.so",
@@ -26388,7 +26337,7 @@ prebuilt_rfsa {
 }
 
 prebuilt_rfsa {
-    name: "libbitml_nsp_skel",
+    name: "vendor_lib_rfsa_adsp_libbitml_nsp_skel_so",
     filename: "libbitml_nsp_skel.so",
     owner: "nothing",
     src: "proprietary/vendor/lib/rfsa/adsp/libbitml_nsp_skel.so",
@@ -26397,7 +26346,7 @@ prebuilt_rfsa {
 }
 
 prebuilt_rfsa {
-    name: "libdsp_streamer_binning",
+    name: "vendor_lib_rfsa_adsp_libdsp_streamer_binning_so",
     filename: "libdsp_streamer_binning.so",
     owner: "nothing",
     src: "proprietary/vendor/lib/rfsa/adsp/libdsp_streamer_binning.so",
@@ -26406,7 +26355,7 @@ prebuilt_rfsa {
 }
 
 prebuilt_rfsa {
-    name: "libhme_dsp_skel",
+    name: "vendor_lib_rfsa_adsp_libhme_dsp_skel_so",
     filename: "libhme_dsp_skel.so",
     owner: "nothing",
     src: "proprietary/vendor/lib/rfsa/adsp/libhme_dsp_skel.so",
@@ -26415,7 +26364,7 @@ prebuilt_rfsa {
 }
 
 prebuilt_rfsa {
-    name: "libmctfengine_skel",
+    name: "vendor_lib_rfsa_adsp_libmctfengine_skel_so",
     filename: "libmctfengine_skel.so",
     owner: "nothing",
     src: "proprietary/vendor/lib/rfsa/adsp/libmctfengine_skel.so",
@@ -26424,7 +26373,7 @@ prebuilt_rfsa {
 }
 
 prebuilt_rfsa {
-    name: "libmlawbpostproc_dsp_skel",
+    name: "vendor_lib_rfsa_adsp_libmlawbpostproc_dsp_skel_so",
     filename: "libmlawbpostproc_dsp_skel.so",
     owner: "nothing",
     src: "proprietary/vendor/lib/rfsa/adsp/libmlawbpostproc_dsp_skel.so",
@@ -26433,7 +26382,7 @@ prebuilt_rfsa {
 }
 
 prebuilt_rfsa {
-    name: "libtfadsp_rx",
+    name: "vendor_lib_rfsa_adsp_libtfadsp_rx_so",
     filename: "libtfadsp_rx.so",
     owner: "nothing",
     src: "proprietary/vendor/lib/rfsa/adsp/libtfadsp_rx.so",
@@ -26442,7 +26391,7 @@ prebuilt_rfsa {
 }
 
 prebuilt_rfsa {
-    name: "libtfadsp_tx",
+    name: "vendor_lib_rfsa_adsp_libtfadsp_tx_so",
     filename: "libtfadsp_tx.so",
     owner: "nothing",
     src: "proprietary/vendor/lib/rfsa/adsp/libtfadsp_tx.so",
@@ -27467,6 +27416,7 @@ cc_prebuilt_library_shared {
                 "proprietary/system_ext/lib64/libwfdnative.so",
             ],
             shared_libs: [
+                "libinput_shim",
                 "libandroid_runtime",
                 "libui",
                 "libinput",
@@ -27965,7 +27915,7 @@ cc_prebuilt_library_shared {
                 "proprietary/system_ext/lib64/vendor.qti.hardware.qccsyshal@1.2-halimpl.so",
             ],
             shared_libs: [
-                "libprotobuf-cpp-full",
+                "libprotobuf-cpp-full-21.7",
                 "libcutils",
                 "liblog",
                 "libhidlbase",
@@ -31389,7 +31339,7 @@ cc_prebuilt_binary {
                 "libhidlbase",
                 "libhidltransport",
                 "libpowercore",
-                "libtinyxml2",
+                "libtinyxml2-v34",
                 "vendor.qti.hardware.perf2-V1-ndk",
                 "libbinder_ndk",
                 "vendor.qti.hardware.power.powermodule-V1-ndk",
